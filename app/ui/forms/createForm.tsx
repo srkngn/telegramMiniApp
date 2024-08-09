@@ -24,6 +24,8 @@ export default function Form({fromTelegram}: FormProps) {
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
 
+  const [notification, setNotification] = useState<{ message: string; type: 'success' | 'error' } | null>(null);
+
   useEffect(() => {
     if (fromTelegram) {
       setFirstName(fromTelegram.first_name);
@@ -47,20 +49,25 @@ export default function Form({fromTelegram}: FormProps) {
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
-        const result = await response.json();
-        console.log(result.message);
+      const responseBody = await response.json();
 
-      setFirstName('');
-      setLastName('');
-      setEmail('');
-      setPhoneNumber('');
+      if (response.ok) {
+        console.log('Your form has been successfully submitted');
+
+        setNotification({message:'Your form has been successfully submitted', type: "success"})
+
+        setFirstName('');
+        setLastName('');
+        setEmail('');
+        setPhoneNumber('');
 
       } else {
         console.error('Form submission failed');
+        setNotification({ message: 'System Error. Please repeat the submission.', type: 'error' });
       }
     } catch (error) {
       console.error('Error submitting form:', error);
+      setNotification({ message: 'System Error.', type: 'error' });
     }
 
   };
@@ -70,6 +77,12 @@ export default function Form({fromTelegram}: FormProps) {
     //const [state2, formAction] = useActionState(createNewCustomer, initialState);
 
     return (
+      <>
+      {notification && (
+        <div className={`p-4 mb-4 rounded-md text-sm ${notification.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+          {notification.message}
+        </div>
+      )}
         <form onSubmit={handleSubmit}>
         <div className="rounded-md bg-gray-50 p-4 md:p-6">
             <div className="mb-4">
@@ -155,5 +168,6 @@ export default function Form({fromTelegram}: FormProps) {
         <Button type="submit">Send</Button>
       </div>
       </form>
+      </>
     );
 }
