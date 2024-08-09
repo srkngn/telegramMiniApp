@@ -3,7 +3,6 @@
 import Form from "@/app/ui/forms/createForm";
 import { useEffect, useState } from "react";
 import Head from "next/head";
-import '../styles/form.css'
 
 interface userDataFromTelegram{
   id:number;
@@ -54,15 +53,15 @@ export default function Page () {
 
     return (
     <>
-      <main className="main-container">
-        <header className="header">
-          <img src="/RoadToStudy/RoadToStudyLogo.png" alt="RoadToStudyLogo" className="logo" />
+      <main className="flex flex-col items-center min-h-screen p-4 box-border">
+        <header className="flex justify-center items-center p-5 w-full">
+          <img src="/RoadToStudy/RoadToStudyLogo.png" alt="RoadToStudyLogo" className="h-16 w-auto" />
         </header>
-        <div className="title">
-        Are you interested in studying in Turkey? 🇹🇷  Fill out the form now to get detailed information about programs, scholarships and admission process. ✨
+        <div className="mb-4 text-justify text-xl max-w-full leading-6 text-white">
+          Are you interested in studying in Turkey? 🇹🇷  Fill out the form now to get detailed information about programs, scholarships and admission process. ✨
         </div>
-        <div className="form-container">
-          <Form fromTelegram={userDataT}/>
+        <div className="w-full max-w-full bg-gray-200 shadow-md p-6 pt-8 box-border rounded-lg">
+          <Form fromTelegram={userDataT} />
         </div>
       </main>
   </>
