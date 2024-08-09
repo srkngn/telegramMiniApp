@@ -63,7 +63,7 @@ export default function Form({fromTelegram}: FormProps) {
       if (response.ok) {
         console.log('Your form has been successfully submitted');
 
-        setNotification({message:'Your form has been successfully submitted', type: "success"})
+        setNotification({message:'Your form has been successfully submitted. Thank you for getting in touch', type: "success"})
 
         setFirstName('');
         setLastName('');
