@@ -33,6 +33,15 @@ export default function Form({fromTelegram}: FormProps) {
     }
   }, [fromTelegram]);
 
+  useEffect(() =>{
+    if(notification?.type === 'success'){
+      const timer = setTimeout(() => {
+        setNotification(null);
+      }, 3000);
+      return () => clearTimeout(timer)
+    }
+  },[notification])
+
   const handleSubmit = async (event: React.FormEvent) => { 
     event.preventDefault();
 
@@ -79,7 +88,7 @@ export default function Form({fromTelegram}: FormProps) {
     return (
       <>
       {notification && (
-        <div className={`p-4 mb-4 rounded-md text-sm ${notification.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+        <div className={`p-4 mb-4 rounded-md text-sm ${notification.type === 'success' ? 'bg-green-100 text-green-800 animate-flash' : 'bg-red-100 text-red-800'}`}>
           {notification.message}
         </div>
       )}
