@@ -11,8 +11,7 @@ export const GET= async () =>  {
     return new NextResponse(JSON.stringify(Students), {status:200});
 
   } catch (error : any) {
-    return new NextResponse("Error handling GET request:" + error.message, {
-        status: 500
+    return new NextResponse(JSON.stringify({ message: 'Error handling GET request: ' + error.message }), {status: 500
     });
   }
 }
@@ -28,7 +27,6 @@ export const POST = async (request: Request) => {
         await newStudent.save();
 
         return new NextResponse(JSON.stringify({ message: 'Student added successfully' }), { status: 201 });
-
 
     }catch(error: any){
       return new NextResponse(JSON.stringify({ message: 'Error handling POST request: ' + error.message }), {status: 500
