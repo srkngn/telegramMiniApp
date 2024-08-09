@@ -45,7 +45,7 @@
 }
 
 /* Küçük ekranlar için düzenlemeler */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .title {
     font-size: 1rem;
     margin-bottom: 12px;
@@ -64,4 +64,4 @@
   .title {
     color: black;
   }
-}
+} */

@@ -66,7 +66,7 @@ export default function Page () {
           </Image>
           
         </header>
-        <div className="mb-8 text-justify text-xl max-w-full leading-6 text-white">
+        <div className="mb-8 text-justify text-xl max-w-full leading-6 text-white box-border">
           Are you interested in studying in Turkey? 🇹🇷  Fill out the form now to get detailed information about programs, scholarships and admission process. ✨
         </div>
         <div className="w-full max-w-full bg-gray-200 shadow-md p-6 pt-8 box-border rounded-lg">

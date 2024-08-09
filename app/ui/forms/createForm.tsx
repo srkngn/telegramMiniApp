@@ -132,7 +132,6 @@ export default function Form({fromTelegram}: FormProps) {
             </div>
           </div>
         </div>
-
         <div className="mb-4">
           <label htmlFor="email" className="mb-2 block text-sm font-medium">
             E-Mail
@@ -152,7 +151,6 @@ export default function Form({fromTelegram}: FormProps) {
             </div>
           </div>
         </div>
-
         <div className="mb-4">
           <label htmlFor="phoneNumber" className="mb-2 block text-sm font-medium">
             Phone Number (With Country Code)
