@@ -3,6 +3,7 @@
 import Form from "@/app/ui/forms/createForm";
 import { useEffect, useState } from "react";
 import Head from "next/head";
+import Image from 'next/image';
 
 interface userDataFromTelegram{
   id:number;
@@ -55,7 +56,15 @@ export default function Page () {
     <>
       <main className="flex flex-col items-center min-h-screen p-4 box-border">
         <header className="flex justify-center items-center p-5 w-full">
-          <img src="/RoadToStudy/RoadToStudyLogo.png" alt="RoadToStudyLogo" className="h-16 w-auto" />
+          <Image 
+          src="/RoadToStudy/RoadToStudyLogo.png"
+          alt="RoadToStudyLogo"
+          width={800}
+          height={600}
+          className="h-16 w-auto"
+          >
+          </Image>
+          
         </header>
         <div className="mb-4 text-justify text-xl max-w-full leading-6 text-white">
           Are you interested in studying in Turkey? 🇹🇷  Fill out the form now to get detailed information about programs, scholarships and admission process. ✨
