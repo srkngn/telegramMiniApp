@@ -50,6 +50,12 @@ export default function Form({fromTelegram}: FormProps) {
       if (response.ok) {
         const result = await response.json();
         console.log(result.message);
+
+      setFirstName('');
+      setLastName('');
+      setEmail('');
+      setPhoneNumber('');
+
       } else {
         console.error('Form submission failed');
       }
