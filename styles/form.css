@@ -1,0 +1,67 @@
+/* Ana kapsayıcı */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 16px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+/* Başlık */
+.title {
+  margin-bottom: 16px;
+  text-align: justify;
+  font-size: 1.25rem;
+  max-width: 100%;
+  line-height: 1.5;
+  color: black;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.header img {
+  height: 70px;
+  width: auto;
+}
+
+/* Form */
+.form-container {
+  width: 100%;
+  max-width: 100%;
+  background-color: #f3f4f6;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+/* Küçük ekranlar için düzenlemeler */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .header {
+    margin-bottom: 12px;
+  }
+
+  .form-container {
+    padding: 16px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .title {
+    color: black;
+  }
+}
