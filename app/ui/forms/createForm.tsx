@@ -34,16 +34,17 @@ export default function Form({fromTelegram}: FormProps) {
   const handleSubmit = async (event: React.FormEvent) => { 
     event.preventDefault();
 
-    const formData = new FormData();
-    formData.append('firstName', firstName);
-    formData.append('lastName', lastName);
-    formData.append('email', email);
-    formData.append('phoneNumber', phoneNumber);
+    const formData = {
+      firstName,
+      lastName,
+      email,
+      phoneNumber
+    };
 
     try {
-      const response = await fetch('/api/forms', {
+      const response = await fetch('/api/createStudentInfo', {
         method: 'POST',
-        body: formData,
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
