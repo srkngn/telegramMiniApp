@@ -84,7 +84,7 @@ export default function Form({fromTelegram}: FormProps) {
         </div>
       )}
         <form onSubmit={handleSubmit}>
-        <div className="rounded-md bg-gray-50 p-4 md:p-6">
+        <div className="rounded-md bg-gray-50 p-4 md:p-8">
             <div className="mb-4">
           <label htmlFor="firstName" className="mb-2 block text-sm font-medium">
             First Name

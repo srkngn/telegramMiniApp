@@ -6,7 +6,6 @@
   min-height: 100vh;
   padding: 16px;
   box-sizing: border-box;
-  background-color: white;
 }
 
 /* Başlık */
@@ -40,6 +39,7 @@
   background-color: #f3f4f6;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 24px;
+  padding-top: 30px;
   box-sizing: border-box;
   border-radius: 15px;
 }
