@@ -1,25 +1,24 @@
-/* Ana kapsayıcı */
-.main-container {
+/* .main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
   padding: 16px;
   box-sizing: border-box;
-}
+} */
 
 /* Başlık */
-.title {
+/* .title {
   margin-bottom: 16px;
   text-align: justify;
   font-size: 1.25rem;
   max-width: 100%;
   line-height: 1.5;
   color: white;
-}
+} */
 
 /* Header */
-.header {
+/* .header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,10 +29,10 @@
 .header img {
   height: 70px;
   width: auto;
-}
+} */
 
 /* Form */
-.form-container {
+/* .form-container {
   width: 100%;
   max-width: 100%;
   background-color: #f3f4f6;
@@ -42,7 +41,7 @@
   padding-top: 30px;
   box-sizing: border-box;
   border-radius: 15px;
-}
+} */
 
 /* Küçük ekranlar için düzenlemeler */
 /* @media (max-width: 768px) {
@@ -64,4 +63,4 @@
   .title {
     color: black;
   }
-} */
+}  */

@@ -55,7 +55,7 @@ export default function Page () {
     return (
     <>
       <main className="flex flex-col items-center min-h-screen p-4 box-border ">
-        <header className="flex justify-center items-center p-5 w-full">
+        <header className="flex justify-center items-center p-5 w-full mb-3 md:mb-8">
           <Image 
           src="/RoadToStudy/RoadToStudyLogo.png"
           alt="RoadToStudyLogo"
@@ -66,7 +66,7 @@ export default function Page () {
           </Image>
           
         </header>
-        <div className="mb-8 text-justify text-xl max-w-full leading-6 text-white box-border">
+        <div className="mb-8 text-justify text-xl max-w-full leading-6 text-black dark:text-white box-border">
           Are you interested in studying in Turkey? 🇹🇷  Fill out the form now to get detailed information about programs, scholarships and admission process. ✨
         </div>
         <div className="w-full max-w-full bg-gray-200 shadow-md p-6 pt-8 box-border rounded-lg">
