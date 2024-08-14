@@ -28,7 +28,7 @@ export default function Form({fromTelegram}: FormProps) {
 
   useEffect(() => {
     if (fromTelegram) {
-      setFirstName(fromTelegram.first_name);
+      setFirstName(fromTelegram.first_name || '');
       setLastName(fromTelegram.last_name || '');
     }
   }, [fromTelegram]);
@@ -53,7 +53,7 @@ export default function Form({fromTelegram}: FormProps) {
     };
 
     try {
-      const response = await fetch('/api/createStudentInfo', {
+      const response = await fetch('/api/studentInfo', {
         method: 'POST',
         body: JSON.stringify(formData),
       });
